@@ -1,10 +1,12 @@
 local taptazed = false
+local Control = 39 --Default key "E"
+--Please reference https://docs.fivem.net/game-references/controls/ to change the keybind
 
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
 			local uped = GetPlayerPed(-1)
-			if IsControlPressed(0, 38) then
+			if IsControlPressed(0, Control) then
 				weapon = GetSelectedPedWeapon(uped)
 				if weapon == 911657153 then
 	local t, distance = GetClosestPlayer()

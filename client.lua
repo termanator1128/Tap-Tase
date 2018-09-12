@@ -1,4 +1,3 @@
-local taptazed = false
 local Control = 39 --Default key "E"
 --Please reference https://docs.fivem.net/game-references/controls/ to change the keybind
 
@@ -22,36 +21,9 @@ end)
 
 RegisterNetEvent('taptaze_c')
 AddEventHandler('taptaze_c', function()
---	taptazed = true
 	SetPedToRagdollWithFall(PlayerPedId(), 1500, 1500, 0, 1.0, 0.0, 0.0, 10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
 		drawNotification("You have been tased")
 end)
-
-
---Citizen.CreateThread(function()
-  --  while true do
-    --    Citizen.Wait(1)
-		
-				
-	--	if (taptazed) then
-	--		RequestAnimDict('ragdoll@human')
-
---			while not HasAnimDictLoaded('ragdoll@human') do
---				Citizen.Wait(0)
---			end
-
---			local myPed = PlayerPedId(-1)
---			local animation = 'electrocute'
---			local flags = 0
-
---			TaskPlayAnim(myPed, 'ragdoll@human', animation, 8.0, -8, -1, flags, 0, 0, 0, 0)
---			Citizen.Wait(10)
---			taptazed = false
---		end
---end
---end)
-
-
 
 function GetPlayers()
     local players = {}

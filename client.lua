@@ -1,4 +1,4 @@
-local Control = 39 --Default key "E"
+local Control = 38 --Default key "E"
 --Please reference https://docs.fivem.net/game-references/controls/ to change the keybind
 
 Citizen.CreateThread(function()

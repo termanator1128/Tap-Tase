@@ -8,12 +8,15 @@ Citizen.CreateThread(function()
 			if IsControlPressed(0, Control) then
 				weapon = GetSelectedPedWeapon(uped)
 				if weapon == 911657153 then
-	local t, distance = GetClosestPlayer()
-	if(distance ~= -1 and distance < 2) then
-		TriggerServerEvent("tapetaze_s", GetPlayerServerId(t))
-	else
-		drawNotification("No ped close to you.")
-	end
+					if IsPedRagdoll(uped) then
+					else
+						local t, distance = GetClosestPlayer()
+						if(distance ~= -1 and distance < 2) then
+							TriggerServerEvent("tapetaze_s", GetPlayerServerId(t))
+						else
+							drawNotification("No ped close to you.")
+						end
+					end
 				end
 			end
 	end
